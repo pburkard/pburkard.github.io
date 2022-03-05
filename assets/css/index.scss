@@ -4,16 +4,18 @@
 html, body{
     scroll-behavior: smooth;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    // overflow: hidden;
     height: 100%;
     margin: 0;
     color: black;
 }
 
-$color_secondary: #a3acbe;
 $color_primary: #47597e;
+$color_secondary: #6b7a97;
+$color_third: #a3acbe;
 $color_complementary1: #51477e;
 $color_complementary2: #47757e;
+
+@import 'navbar.scss';
 
 h1{
     font-size: 4em;
@@ -53,7 +55,6 @@ p {
     border-color: black;
     background-color: white;
     color: black;
-    
     &:hover{
         border-color: white;
         background-color: $color_secondary;

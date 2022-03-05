@@ -2,22 +2,27 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}" />
     <link href="{{ '/assets/images/' | relative_url }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    {% include navbar.html %}
     <div id="home">
-        <div class="content">
+        <div class="sectionbody">
             <h1>Hi!<br>My name is {{ site.title }}.</h1>
-            <h2>This is my personal website.</h2>
-            <div class="button-area">
-                <button class="button-type1" onclick="window.location.href='#projects'">Projects</button>
-                <button class="button-type1" onclick="window.location.href='#introduction'">Introduction</button>
-                <button class="button-type1" onclick="window.location.href='#contact'">Contact</button>
-            </div>
+            <h2>And this is my personal website.</h2>
+            <!-- <div class="button-area">
+                <button class="button-primary" onclick="window.location.href='#projects'">Blog Posts</button>
+                <button class="button-primary" onclick="window.location.href='#introduction'">Introduction</button>
+                <button class="button-primary" onclick="window.location.href='#contact'">Contact</button>
+            </div> -->
+            <!-- <div id="home-background-animation"></div> -->
+            <!-- {% include solar_system.html %} -->
+            
         </div>
-        
     </div>
+    
     {% include projects.html %}
     {% include introduction.html %}
     {% include contact.html %}
