@@ -1,0 +1,62 @@
+<style>
+    #solar_system{
+		position: fixed;
+        /* border: solid white 1px; */
+		z-index: -1;
+		top: 50%;
+		left: 50%;
+		margin-top: -150px;
+		margin-left: -150px;
+    }
+</style>
+<canvas id="solar_system" width="300" height="300"></canvas>
+<script>
+	var canvas = document.getElementById("solar_system");
+	var ctx = canvas.getContext("2d");
+	var centerX = canvas.width/2;
+	var centerY = canvas.height/2;
+	var angleMars = 0;
+	var angleEarth = 0;
+	
+	function drawEarth() {
+		var speed = 0.01;
+		var x = centerX + Math.cos(angleEarth) * 100;
+		var y = centerY + Math.sin(angleEarth) * 100;
+		ctx.beginPath();
+		ctx.arc(x, y, 5, 0, Math.PI*2);
+		ctx.fillStyle = "#a3acbe";
+		ctx.fill();
+		ctx.closePath();
+		angleEarth+=speed;
+	}
+	
+	function drawMars() {
+		var speed = 0.005;
+		var angle = 0;
+		var x = centerX + Math.cos(angleMars) * 150;
+		var y = centerY + Math.sin(angleMars) * 150;
+		ctx.beginPath();
+		ctx.arc(x, y, 3, 0, Math.PI*2);
+		ctx.fillStyle = "#a3acbe";
+		ctx.fill();
+		ctx.closePath();
+		angleMars+=speed;
+	}
+	
+	function drawSun() {
+		ctx.beginPath();
+		ctx.arc(centerX, centerY, 10, 0, Math.PI*2);
+		ctx.fillStyle = "#a3acbe";
+		ctx.fill();
+		ctx.closePath();
+	}
+	
+	function draw() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		drawEarth();
+		drawSun();
+		drawMars()
+	}
+	setInterval(draw, 10);
+	
+</script>
