@@ -1,6 +1,9 @@
 <div class="navbar" id="navbar">
-    <a href="javascript:void(0);" class="icon" onclick="triggerNav()">
+    <a id="icon-open" onclick="navOpen()">
         <i class="fa fa-bars"></i>
+    </a>
+    <a id="icon-close">
+        <i class="fa fa-x"></i>
     </a>
     <a href="#home">Home</a>
     <a href="#projects">Projects</a>
@@ -15,11 +18,11 @@
         }
     }, true);
 
-    function triggerNav() {
-        if (!navIsOpen()) {
-            navOpen();
+    function navIsOpen() {
+        if (navbar.classList.contains("open")) {
+            return true;
         } else {
-            navClose();
+            return false;
         }
     }
 
@@ -32,14 +35,6 @@
     function navClose() {
         if (navIsOpen()) {
             navbar.classList.remove("open");
-        }
-    }
-
-    function navIsOpen() {
-        if (navbar.classList.contains("open")) {
-            return true;
-        } else {
-            return false;
         }
     }
 </script>
