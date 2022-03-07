@@ -1,8 +1,10 @@
 <div id="projects">
-    <div class="sectionheader"></div>
     <div class="sectionbody">
-        <p class="title">Projects</p>
-        <!-- <button class="button-type1" onclick="window.location.href='mars-rover'">Mars Rover Project</button> -->
-        {% include posts.html %}
+        <h1>Projects</h1>
+        {% include post_list.html %}
+        <div id="contact-links" class="button-group">
+            <button class="button-primary" onClick="window.open('{{ github }}','_blank')" type="button"><i class="fa-brands fa-github"></i>Github</button>
+            <button class="button-primary" onClick="window.open('{{ stackoverflow }}','_blank')" type="button"><i class="fa-brands fa-stack-overflow"></i>Stackoverflow</button>
+        </div>
     </div>
 </div>
