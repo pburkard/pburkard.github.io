@@ -27,7 +27,6 @@
 #introduction {
     @include section();
     @include page-separation();
-    display: table;
     background-color: white;
 }
 
@@ -76,6 +75,7 @@
 #portrait-picture{
     width: 100%;
     max-width: 400px;
+    margin-top: 20px;
 }
 
 .scroll-hint-arrow {
