@@ -1,0 +1,95 @@
+@mixin page-separation {
+    border-top: solid $color_secondary 10px;
+}
+
+@mixin section() {
+    min-height: 100%;
+}
+
+.sectionbody{
+    @include content();
+}
+
+#home {
+    @include section();
+    background-color: $color_primary;
+    color: white;
+    // position: relative;
+    // z-index: -1;
+}
+
+#projects{
+    @include section();
+    @include page-separation();
+    background-color: white;
+}
+
+#introduction {
+    @include section();
+    @include page-separation();
+    display: table;
+    background-color: white;
+}
+
+#contact {
+    @include section();
+    @include page-separation();
+    background-color: white;
+}
+
+#post-list {
+    margin-bottom: 60px;
+    & ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        
+    }
+    & li {
+        margin: 10px 0;
+        & a {
+            color: black;
+            text-decoration: none;
+            font-size: $font_size_standard;
+            & i {
+                font-size: 0.6em;
+                vertical-align: middle;
+                display: none;
+            }
+            & p {
+                border: solid $color_secondary 1px;
+                padding: 5px;
+                font-size: 0.5em;
+                display: inline-block;
+            }
+            &:hover {
+                color: $color_primary;
+                padding-left: 6px;
+                & i {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+#portrait-picture{
+    width: 100%;
+    max-width: 400px;
+}
+
+.scroll-hint-arrow {
+    position: absolute; 
+    width: 100%; 
+    text-align: center; 
+    top: 95%;
+    color: $color_secondary;
+}
+
+#home-background-animation{
+    position: absolute;
+    height: 50px;
+    width: 80px;
+    border-radius: 20%;
+    background-color: white;
+}
