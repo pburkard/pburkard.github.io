@@ -21,9 +21,15 @@ main {
     display: initial;
 }
 
-
-@mixin content {
-    padding: 10%;
+footer {
+    @include content();
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    background-color: $color_secondary;
+    color: white;
+    & p {
+        font-size: 1em;
+    }
 }
 
 h1{
@@ -51,7 +57,7 @@ p {
 }
 
 a {
-    color: white;
+    color: inherit;
     &:hover {
         text-decoration: none;
     }
@@ -99,17 +105,6 @@ a {
         min-width: 200px;
         margin-top: 5px;
         margin-bottom: 0;
-    }
-}
-
-footer {
-    @include content();
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    background-color: $color_secondary;
-    color: white;
-    & p {
-        font-size: 1em;
     }
 }
 
