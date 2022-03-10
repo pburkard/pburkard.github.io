@@ -16,6 +16,14 @@ $color_complementary1: #51477e;
 $color_complementary2: #47757e;
 $font_size_standard: 1.25em;
 
+header {
+    display: initial;
+}
+
+main {
+    display: initial;
+}
+
 @mixin content {
     padding: 10%;
 }
