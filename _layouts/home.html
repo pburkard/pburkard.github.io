@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ '/assets/images/' | relative_url }}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ '/assets/css/screen.css' | relative_url }}" />
-    <script src="https://kit.fontawesome.com/cea4e3b59d.js" crossorigin="anonymous"></script>
-</head>
-<body>
+---
+layout: root
+---
+<header>
     {% include navbar.html %}
+</header>
+<main>
     <div id="home">
         <div class="sectionbody">
             <h1>Hi!<br>My name is {{ site.title }}.</h1>
@@ -16,6 +12,7 @@
             <!-- <div id="home-background-animation"></div> -->
             <!-- {% include solar_system.html %} -->
         </div>
+
         <div class="scroll-hint-arrow">
             <i class="fa-solid fa-chevron-down"></i>
         </div>
@@ -23,11 +20,5 @@
     {% include projects.html %}
     {% include introduction.html %}
     {% include contact.html %}
-    <footer>
-        <p>
-            This website was made with <i class="fa-solid fa-heart"></i> by <a href="/#introduction">{{ site.author.name }}</a> using <a href="https://pages.github.com/" target="_blank">Github Pages</a> and <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>.
-            Icons are from <i class="fa-solid fa-font-awesome"></i> <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>.
-        </p>
-    </footer>
-</body>
-</html>
+</main>
+{% include footer.html %}

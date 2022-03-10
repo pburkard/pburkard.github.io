@@ -1,0 +1,24 @@
+#post-heading{
+    @include content();
+    padding-bottom: 5%;
+    padding-top: 5%;
+    background-color: $color_primary;
+    color: white;
+}
+
+#post-main {
+    @include content();
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    h4 {
+        font-size: 1.25em;
+    }
+}
