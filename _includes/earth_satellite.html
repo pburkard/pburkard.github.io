@@ -1,0 +1,43 @@
+<style>
+	canvas {
+		position: absolute;
+		top: 30%;
+		left: 0%;
+	}
+</style>
+<canvas id="earth-satellite" width="1000" height="1000">
+	<img id="earth" src="{{ '/assets/images/earth-drawing.png' | relative_url }}">
+	<img id="satellite" src="{{ '/assets/images/satellite-drawing-2.png' | relative_url }}">
+
+</canvas>
+
+<script>
+	var canvas = document.getElementById('earth-satellite');
+	var ctx = canvas.getContext("2d");
+	var centerX = canvas.width / 2;
+	var centerY = canvas.height / 2;
+
+	var earth = document.getElementById('earth');
+	var satellite = document.getElementById('satellite');
+	var angleSatellite = 0;
+
+	function drawEarth() {
+		size = 200;
+		ctx.drawImage(earth, centerX - size / 2, centerY - size / 2, size, size);
+	}
+
+	function drawSatellite() {
+		size = 100;
+		var x = centerX + Math.cos(angleSatellite) * 200;
+		var y = centerY + Math.sin(angleSatellite) * 200;
+		ctx.drawImage(satellite, x - size / 2, y - size / 2, size, size);
+		angleSatellite += 0.01;
+	}
+
+	function draw() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		drawEarth();
+		drawSatellite();
+	}
+	setInterval(draw, 10);
+</script>
