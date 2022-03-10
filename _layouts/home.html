@@ -1,5 +1,5 @@
 ---
-layout: main
+layout: root
 ---
 <header>
     {% include navbar.html %}
@@ -21,12 +21,4 @@ layout: main
     {% include introduction.html %}
     {% include contact.html %}
 </main>
-<footer>
-    <p>
-        This website was made with <i class="fa-solid fa-heart"></i> by <a href="/#introduction">{{ site.author.name
-            }}</a> using <a href="https://pages.github.com/" target="_blank">Github Pages</a> and <a
-            href="https://jekyllrb.com/" target="_blank">Jekyll</a>.
-        Icons are from <i class="fa-solid fa-font-awesome"></i> <a href="https://fontawesome.com/" target="_blank">Font
-            Awesome</a>.
-    </p>
-</footer>
+{% include footer.html %}
