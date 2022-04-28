@@ -4,7 +4,31 @@
 {% assign posts = site.posts %}
 {% endif %}
 
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+
 <div id="post-list">
+    <ul>
+        {% for category in site.categories %}
+          <li>
+            <p class="category-name">{{ category | first }}</p>
+            <ul>
+            {% for post in category.last %}
+            <li>
+                <a href="{{ post.url }}">
+                    <i class="fa-solid fa-chevron-right"></i>
+                    {{ post.title }}
+                    <p>{{ post.date | date: date_format }}</p>
+                </a>
+            </li>
+            {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+<!-- <div id="post-list">
     {%- if posts.size > 0 -%}
     {%- if page.list_title -%}
     <h2 class="post-list-heading">{{ page.list_title }}</h2>
@@ -54,4 +78,4 @@
     </div>
     {%- endif %}
     {%- endif -%}
-</div>
+</div> -->

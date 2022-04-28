@@ -4,6 +4,12 @@
     padding-top: 5%;
     background-color: $color_primary;
     color: white;
+    & h1 {
+        font-size: 5em;
+    }
+    & h2 {
+        font-size: 2em;
+    }
 }
 
 #post-main {

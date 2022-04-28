@@ -42,7 +42,9 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
-        
+        & .category-name {
+            font-size: 2em;
+        }
     }
     & li {
         margin: 10px 0;
