@@ -27,6 +27,14 @@
     & .icon {
         display: none;
     }
+    & .item-category, .item-category-title{
+        float: right;
+    }
+    // & .item-category-title {
+    //     &:hover {
+    //         background-color: $color_primary;
+    //     }
+    // }
 }
 
 @media screen and (max-width: 600px) {

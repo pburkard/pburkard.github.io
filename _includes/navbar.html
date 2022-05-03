@@ -9,6 +9,19 @@
     <a href="/#projects">Projects</a>
     <a href="/#introduction">About</a>
     <a href="/#contact">Contact</a>
+    
+    {% if page.category %}
+    {% for category in site.categories %}
+    {% if category.first == page.category %}
+    
+    {% for post in category.last %}
+        <a href="{{ post.url }}" class="item-category">{{ post.title }}</a>
+    {% endfor %}
+
+    <!-- <a class="item-category-title">{{ category.first }}:</a> -->
+    {% endif %}
+    {% endfor %}
+    {% endif %}
 </div>
 <script>
     var navbar = document.getElementById("navbar");
