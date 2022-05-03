@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Motivation
-date:   2021-12-01
+date:   2021-09-12
 toc: false
 category: MarsRover
 ---
